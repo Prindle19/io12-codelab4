@@ -45,8 +45,5 @@ function parseMapRoot(data) {
           gebLayers[layerID].setMap(null);
       }      
 });  
-
-setMapBounds(data.bounds);
     
 }
-
