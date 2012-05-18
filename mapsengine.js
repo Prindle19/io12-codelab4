@@ -1,3 +1,20 @@
+function loadJSONP() {
+    
+ // Get MapRoot JSON from Maps Engine Directory
+
+// URL of the external script
+var url = 'https://mapsenginedirectory.appspot.com/maproot/?acl=public&format=jsonp&callback=parseMapRoot&map=04996796288385000359-08363259842776504974-4';
+
+// Create Insertable Script
+var script = document.createElement('script');
+script.setAttribute('src', url);
+
+// load the script
+document.getElementsByTagName('head')[0].appendChild(script);    
+    
+}    
+
+
 function parseMapRoot(data) {
     //g = data
     //g is just useful in case you want to use developer tools to poke around at the returned json object
@@ -28,6 +45,8 @@ function parseMapRoot(data) {
           gebLayers[layerID].setMap(null);
       }      
 });  
+
+setMapBounds(data.bounds);
     
 }
 
