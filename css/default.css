@@ -2,7 +2,7 @@ html {
     height: 100%;
 }
 body {
-	font-size: 12pt;
+	font-size: 10pt;
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -10,13 +10,15 @@ body {
 
 #side_bar {
     float: left;
-    width: 15%;
+    width: 350px;
     height: 100%;
+    margin-left: 0px;
 }
 
 #map_canvas {
-    width: 85%;
 	height: 100%;
+    margin-left: 170px;
+    margin-right: 0px;
 }
 
 #map_title {
@@ -25,6 +27,7 @@ body {
 
 #layer_picker ul {
     padding-left:0;
+    font-size: 10pt;
 }
 
 #layer_picker ul li {

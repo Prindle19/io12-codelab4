@@ -1,5 +1,5 @@
 var map;
-function initialize() {
+function initializeMap() {
  /**
  * Map options
  */
@@ -14,8 +14,6 @@ var myOptions = {
 
 /*  Initialize map  */
 map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-     
-loadJSONP();
 
 }
 
