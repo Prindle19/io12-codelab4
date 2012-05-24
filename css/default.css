@@ -25,6 +25,10 @@ body {
     text-align: center;
 }
 
+#logo {
+    text-align: center;
+}
+
 #layer_picker ul {
     padding-left:0;
     font-size: 10pt;
