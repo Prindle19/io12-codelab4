@@ -31,5 +31,13 @@ function setMapBounds(bounds){
 
  }
 
+function clearLayers(){
+
+  $.each(gebLayers, function(gebLayerIndex) {
+      //set all the layers that might be on to null to remove from the map
+    gebLayers[gebLayerIndex].setMap(null)
+  });
+
+}    
 
 google.maps.event.addDomListener(window, 'load', initialize);

@@ -63,8 +63,9 @@ document.getElementsByTagName('head')[0].appendChild(script);
 }    
 
 function parseMapRoot(data) {
-     //Clear out anything existing in the Select Layers DIV
+     //Clear out anything existing in the Select Layers DIV, and clear any existing map layers from previously loaded maps 
   $("#select_layers").empty();
+  clearLayers();
      //Clear out all the MapDataLayer GEB Layers, and the associated array
   gebLayer = null;
   gebLayers = new Array();
