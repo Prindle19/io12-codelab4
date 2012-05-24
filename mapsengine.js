@@ -35,7 +35,9 @@ function parseDirectory(data){
     catch(ex){
    	  gebmapselect.add(newOption);
     }   
-  });   
+  });
+  
+  showSideBar();
     
 }    
 
@@ -70,7 +72,7 @@ function parseMapRoot(data) {
      //Set the map bounds equal to the MapRoot bounds
   setMapBounds(data.bounds);
     // Append a UL called layer_picker to the select_layers div
-  $("#select_layers").append("<ul id='layer_picker' style='list-style-type: none; font-size: 10pt;'></ul>");
+  $("#select_layers").append("<ul id='layer_picker' style='padding-left:0; list-style-type: none; font-size: 10pt;'></ul>");
      //Parse the contents of the MapRoot and create an interactive list of checkboxes to allow users to toggle on and off layers.
   $.each(data.layers, function(layerIndex) {
       //detect and handle folders 

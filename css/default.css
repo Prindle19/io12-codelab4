@@ -10,14 +10,14 @@ body {
 
 #side_bar {
     float: left;
-    width: 350px;
+    width: 0px;
     height: 100%;
     margin-left: 0px;
 }
 
 #map_canvas {
 	height: 100%;
-    margin-left: 170px;
+    margin-left: 0px;
     margin-right: 0px;
 }
 
@@ -32,4 +32,8 @@ body {
 
 #layer_picker ul li {
 	list-style:none;
+}
+
+#accordion .ui-accordion-content {
+    padding: 1em; 
 }
