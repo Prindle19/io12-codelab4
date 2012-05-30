@@ -21,9 +21,10 @@ function parseDirectory(data){
     
       //Create a New Select Option With the Map Name as The Text and Map ID As the Value (Step 3) 
     
+  }); 
   
   showSideBar();
-    
+   
 }    
 
 
