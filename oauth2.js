@@ -4,13 +4,14 @@ function initialize() {
   var hash_value = window.location.hash;
     //If there is no has value, that means we need to redirect to the Google OAuth 2.0 API and get a token
     //We need to send the unique client ID, API Scope, and Redirect URI info to the API. We must construct a URI to do this.
+    //Set Your Client ID and Redirect URL (Step 1)
   if (!hash_value) {
        // We start with the base oauth2 URI.
 	 var redirect_url = "https://accounts.google.com/o/oauth2/auth";
        // Next we append the unique Client ID.
-     redirect_url += "?client_id=135935452439.apps.googleusercontent.com";
+     redirect_url += "?client_id=?";
        // Then we append the redirect URI.
-     redirect_url += "&redirect_uri=http://dynamicmaproots.seanwohltman.c9.io/";
+     redirect_url += "&redirect_uri=?";
        // Next we append the "Scope" or permisions to other Google APIs to which we need the user to grant access to their information.
      redirect_url += "&scope=https://www.googleapis.com/auth/earthbuilder.readonly";
        // Finally, we need to specify that we want a token.

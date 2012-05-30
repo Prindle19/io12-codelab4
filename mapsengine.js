@@ -17,25 +17,10 @@ function parseDirectory(data){
   $.each(data.databases, function(mapindex) {
     var isPub = "";
     var gebmapselect = null;
-        // If the map is public, add it to the public select
-   	if (data.databases[mapindex].shared_with === 'public') {
-   	  gebmapselect = document.getElementById('gebPublicMaps');
-   	 	// If the maps is private, ass it to the private select
-   	} else {
-   	  gebmapselect = document.getElementById('gebPrivateMaps');
-   	}
-       
-    var newOption = document.createElement('option');
-    mapID = data.databases[mapindex].url.split("/")[3];
-    newOption.value = mapID;
-    newOption.text = data.databases[mapindex].name;
-    try {
-      gebmapselect.add(newOption, null)
-   	}
-    catch(ex){
-   	  gebmapselect.add(newOption);
-    }   
-  });
+      //Determine if Map is Public or Private, and Sort (Step 2)
+    
+      //Create a New Select Option With the Map Name as The Text and Map ID As the Value (Step 3) 
+    
   
   showSideBar();
     
@@ -74,15 +59,9 @@ function parseMapRoot(data) {
   setMapBounds(data.bounds);
     // Append a UL called layer_picker to the select_layers div
   $("#select_layers").append("<ul id='layer_picker' style='padding-left:0; list-style-type: none; font-size: 10pt;'></ul>");
-     //Parse the contents of the MapRoot and create an interactive list of checkboxes to allow users to toggle on and off layers.
-  $.each(data.layers, function(layerIndex) {
-      //detect and handle folders 
-    if (data.layers[layerIndex].layerType == "FOLDER"){
- 	  parseFolder(data.layers[layerIndex]);
- 	} else {  
-      parseLayer(data.layers[layerIndex]);
-    } 
-  });
+     //Parse the contents of the MapRoot and create an interactive list of checkboxes to allow users to toggle on and off layers. 
+     // Handle Folders Which Might Be In The Map(Step 4)
+
   $('#accordion').accordion('activate', 1);
   
     //add a JQuery Listener to the new "layer" class, so when a checkbox is checked, it will toggle a layer on or off
