@@ -1,5 +1,5 @@
 // This is just a simple web server app for Cloud9
-// Borrwoed from http://thecodinghumanist.com/blog/archives/2011/5/6/serving-static-files-from-node-js
+// Borrowed from http://thecodinghumanist.com/blog/archives/2011/5/6/serving-static-files-from-node-js
 // It will load the index.html file plus any .js or .css includes that are in index.html
 //
 
