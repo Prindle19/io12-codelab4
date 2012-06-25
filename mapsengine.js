@@ -18,8 +18,14 @@ function parseDirectory(data){
     var isPub = "";
     var gebmapselect = null;
       //Determine if Map is Public or Private, and Sort (Step 2)
+      ///////////////////////////////////
+      // PASTE STEP 2 BELOW HERE //////
+      ////////////////////////////////
     
       //Create a New Select Option With the Map Name as The Text and Map ID As the Value (Step 3) 
+      ///////////////////////////////////
+      // PASTE STEP 3 BELOW HERE //////
+      ////////////////////////////////
     
   }); 
   
@@ -61,7 +67,11 @@ function parseMapRoot(data) {
     // Append a UL called layer_picker to the select_layers div
   $("#select_layers").append("<ul id='layer_picker' style='padding-left:0; list-style-type: none; font-size: 10pt;'></ul>");
      //Parse the contents of the MapRoot and create an interactive list of checkboxes to allow users to toggle on and off layers. 
+     
      // Handle Folders Which Might Be In The Map(Step 4)
+     ///////////////////////////////////
+    // PASTE STEP 4 BELOW HERE //////
+   ////////////////////////////////
 
   $('#accordion').accordion('activate', 1);
   
