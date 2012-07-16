@@ -44,6 +44,6 @@ http.createServer(function (request, response) {
         }
     });
      
-}).listen(process.env.PORT || 8080, "0.0.0.0");
+}).listen(process.env.PORT);
  
 console.log('Server is running');
